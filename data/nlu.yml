@@ -89,3 +89,33 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: gaming_options
+  examples: |
+    - games
+    - play games
+    - play
+    - I want to play games
+    - Do you have any games?
+    - What games do you have?
+    - What games are available?
+    - How do you play games?
+    - How many games do you have?
+    - How many games are available?
+    - How many games can you play?
+
+- intent: game_category_free_games
+  examples: |
+    - free games
+
+- intent: game_category_battle
+  examples: |
+    - battle
+
+- intent: game_category_premium_games
+  examples: |
+    - premium games
+
+- intent: game_category_fantasy
+  examples: |
+    - fantasy

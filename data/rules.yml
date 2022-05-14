@@ -11,3 +11,37 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Say 'I have some games' anytime the user says games
+  steps:
+  - intent: gaming_options
+  - action: utter_games
+
+- rule: Open the link for the game category Free Games
+  steps:
+  - intent: game_category_free_games
+  - action: utter_free_games
+
+- rule: Open the link for the game category Free Games
+  steps:
+  - intent: game_category_free_games
+  - action: utter_free_games
+
+- rule: Open the link for the game category Battle
+  steps:
+  - intent: game_category_battle
+  - action: utter_battle
+
+- rule: Open the link for the game category Premium Games
+  steps:
+  - intent: game_category_premium_games
+  - action: utter_premium_games
+
+- rule: Open the link for the game category Fantasy
+  steps:
+  - intent: game_category_fantasy
+  - action: utter_fantasy
+
+
+
+  

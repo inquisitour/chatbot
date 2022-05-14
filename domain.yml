@@ -8,6 +8,11 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - gaming_options
+  - game_category_free_games
+  - game_category_battle
+  - game_category_premium_games
+  - game_category_fantasy
 
 responses:
   utter_greet:
@@ -28,6 +33,30 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_games:
+  - text: "I have some games for you to play with me." 
+    buttons:
+    - title: "Free Games"
+      payload: '/game_category_free_games'
+    - title: "Battle"
+      payload: '/game_category_battle'
+    - title: "Premium Games"
+      payload: '/game_category_premium_games'
+    - title: "Fantasy"
+      payload: '/game_category_fantasy'
+
+  utter_free_games:
+  - text: "[Click here for Free Games](https://hardygame.com/hardygames/paidgames/freegames)"
+  
+  utter_battle:
+  - text: "[Click here for Battle Games](https://hardygame.com/hardygames/paidgames/battle)"
+
+  utter_premium_games:
+  - text: "[Click here for Premium Games](https://hardygame.com/hardygames/paidgames/premiumgames)"
+
+  utter_fantasy:
+  - text: "[Click here for Fantasy Games](https://hardygame.com/hardygames/paidgames/fantasy)"
 
 session_config:
   session_expiration_time: 60

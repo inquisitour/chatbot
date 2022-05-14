@@ -1,0 +1,44 @@
+
+<html>
+    <body>
+        <style>
+            .rw-conversation-container .rw-header{background-color:#7213b6;}
+            .rw-conversation-container .rw-header .rw-title{color:#f6a400;}
+            .rw-conversation-container .rw-messages-container .rw-message .rw-response{background-color:#fef200;}
+            .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color:#7213b6;}
+            .rw-conversation-container .rw-messages-container .rw-message .rw-client .rw-message-text{color:#fef200;}
+            .rw-conversation-container .rw-messages-container .rw-message .rw-response .rw-message-text{color:#7213b6;}
+            .rw-launcher{background-color:#7213b6;}
+        </style>
+        <script>!(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+            "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+            // Replace 1.x.x with the version that you want
+            (e.async = !0),
+            (e.onload = () => {
+                window.WebChat.default(
+                    {
+                        initPayload: '/greet',
+                        customData: { language: "en" },
+                        socketUrl: "http://localhost:5005",
+                        title: "Let's Chat",
+                        subtitle: "Your game assistant!",
+                        profileAvatar: "./assets/robo.svg",
+                        showFullScreenButton: true,
+                        showMessageDate: true,
+                        inputTextFieldHint: "What's on your mind?",
+                        //embedded: true,
+                        //storage: "session",
+                        //add other props here
+                    },
+                 null
+                 );
+             }),
+             t.insertBefore(e, t.firstChild);
+        })();
+        localStorage.clear();
+        </script>
+    </body>
+</html>

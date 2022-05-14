@@ -28,3 +28,19 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: game path
+  steps:
+  - intent: gaming_options
+  - action: utter_games
+
+- story: enquiry path
+  steps:
+  - intent: game_category_free_games
+  - action: utter_free_games
+  - intent: game_category_battle
+  - action: utter_battle
+  - intent: game_category_premium_games
+  - action: utter_premium_games
+  - intent: game_category_fantasy
+  - action: utter_fantasy
