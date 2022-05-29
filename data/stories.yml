@@ -6,6 +6,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_first_message1
+  - action: utter_first_message2
+  - action: utter_first_message3
   - intent: mood_great
   - action: utter_happy
 
@@ -34,13 +37,14 @@ stories:
   - intent: gaming_options
   - action: utter_games
 
-- story: enquiry path
+- story: show category path
   steps:
-  - intent: game_category_free_games
-  - action: utter_free_games
-  - intent: game_category_battle
-  - action: utter_battle
-  - intent: game_category_premium_games
-  - action: utter_premium_games
-  - intent: game_category_fantasy
-  - action: utter_fantasy
+  - intent: show_categories
+  - action: action_show_categories
+
+- story: show carousels path
+  steps:
+  - intent: show_carousels
+  - action: action_show_carousels
+
+

@@ -2,21 +2,42 @@ version: "3.1"
 
 intents:
   - greet
+  - first_message1
+  - first_message2
+  - first_message3
   - goodbye
   - affirm
   - deny
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - show_categories
   - gaming_options
-  - game_category_free_games
-  - game_category_battle
-  - game_category_premium_games
-  - game_category_fantasy
+  - show_carousels
+
+actions:
+  - action_show_categories
+  - action_show_carousels
 
 responses:
+  utter_reject:
+    - text: "What are you looking for?"
+
   utter_greet:
   - text: "Hey! How are you?"
+
+  utter_first_message1:
+  - text: "Welcome to Hardy Games, your Gaming Companion for your entertainment."
+    image: "https://cdn.kapwing.com/final_628a3e137929cb009da6a0b9_597123.gif"
+
+  utter_first_message2:
+  - text: "We have many Online Games ready for you."
+
+  utter_first_message3:
+  - text: "Are you ready to play? Do you want to play Games?"
+    buttons:
+    - title: "Yes"
+      payload: '/show_categories'
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -35,7 +56,7 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
   utter_games:
-  - text: "I have some games for you to play with me." 
+  - text: "I have some games for you to play with me."
     buttons:
     - title: "Free Games"
       payload: '/game_category_free_games'
@@ -47,16 +68,17 @@ responses:
       payload: '/game_category_fantasy'
 
   utter_free_games:
-  - text: "[Click here for Free Games](https://hardygame.com/hardygames/paidgames/freegames)"
-  
+  - text: "[Free Games](https://google.com)"
+
   utter_battle:
-  - text: "[Click here for Battle Games](https://hardygame.com/hardygames/paidgames/battle)"
+  - text: "[Battle Games](https://hardygame.com/hardygames/paidgames/battle)"
 
   utter_premium_games:
-  - text: "[Click here for Premium Games](https://hardygame.com/hardygames/paidgames/premiumgames)"
+  - text: "[Premium Games](https://hardygame.com/hardygames/paidgames/premiumgames)"
 
   utter_fantasy:
-  - text: "[Click here for Fantasy Games](https://hardygame.com/hardygames/paidgames/fantasy)"
+  - text: "[Fantasy Games](https://hardygame.com/hardygames/paidgames/fantasy)"
+
 
 session_config:
   session_expiration_time: 60

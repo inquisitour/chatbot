@@ -90,32 +90,31 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: gaming_options
+- intent: show_categories
   examples: |
-    - games
-    - play games
-    - play
-    - I want to play games
-    - Do you have any games?
-    - What games do you have?
-    - What games are available?
-    - How do you play games?
-    - How many games do you have?
-    - How many games are available?
-    - How many games can you play?
+    - Yes
+    - yes
+    - YES
 
-- intent: game_category_free_games
+- intent: show_carousels
   examples: |
+    - Free Games
     - free games
-
-- intent: game_category_battle
-  examples: |
-    - battle
-
-- intent: game_category_premium_games
-  examples: |
+    - FREE GAMES
+    - Action Games
+    - action games
+    - ACTION GAMES
+    - Casual Games
+    - casual games
+    - CASUAL GAMES
+    - Sports Games
+    - sports games
+    - SPORTS GAMES
+    - All Games
+    - all games
+    - ALL GAMES
+    - Premium Games
     - premium games
+    - PREMIUM GAMES
 
-- intent: game_category_fantasy
-  examples: |
-    - fantasy
+
